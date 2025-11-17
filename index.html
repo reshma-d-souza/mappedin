@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>City Centre Mall — In‑Store Navigation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<h1>City Centre Mall — Mangalore</h1>
+<div class="controls">
+<select id="floorSelect"></select>
+<input id="searchInput" placeholder="Search shops or items..." />
+<button id="shopkeeperToggle">Shopkeeper Mode</button>
+</div>
+</header>
+
+
+<main class="layout">
+<aside class="sidebar">
+<section class="mall-info">
+<div>Open: <span id="openTime">10:00</span></div>
+<div>Close: <span id="closeTime">22:00</span></div>
+</section>
+<section class="shops">
+<h2>Shops</h2>
+<ul id="shopList"></ul>
+</section>
+
+
+<section class="selected">
+<h3>Selected</h3>
+<div id="selectedInfo">None</div>
+<div class="actions">
+<button id="routeBtn" disabled>Show Route</button>
+<button id="qrBtn" disabled>Generate QR</button>
+<a id="downloadQr" href="#" download="shop-qr.png" style="display:none">Download QR</a>
+</div>
+</section>
+</aside>
+
+
+<section class="map-area">
+<div id="mapContainer">
+<!-- Canvas-like SVG map will be inserted here -->
+</div>
+<div id="floorLegend" class="legend"></div>
+</section>
+
+
+<aside class="rightpanel">
+<h3>Directions</h3>
+<ol id="routeSteps"></ol>
+<hr />
+<h4>Shopkeeper Edit</h4>
+<div id="editPanel" style="display:none">
+<input id="editName" />
+<button id="saveEdit">Save</button>
+</div>
+</aside>
+</main>
+
+
+<footer class="footer">Built for City Centre Mall — Mangalore • Demo</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
