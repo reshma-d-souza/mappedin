@@ -1,0 +1,25 @@
+:root{
+--accent:#1f7a7a; --muted:#f4f6f8; --card:#ffffff; --shadow:0 6px 18px rgba(20,20,20,0.08);
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif}
+body{margin:0;background:linear-gradient(180deg,#f7fbfb,#eef6f6);color:#122}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:var(--card);box-shadow:var(--shadow)}
+.topbar h1{margin:0;font-size:18px}
+.controls{display:flex;gap:8px;align-items:center}
+.controls input, .controls select{padding:8px;border:1px solid #e0e6e6;border-radius:8px}
+.controls button{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+.layout{display:grid;grid-template-columns:300px 1fr 320px;gap:16px;padding:18px}
+.sidebar{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow)}
+.rightpanel{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow)}
+.map-area{background:transparent;padding:6px}
+#mapContainer{height:640px;border-radius:12px;background:#fff;box-shadow:var(--shadow);padding:12px;position:relative}
+.legend{margin-top:8px}
+.shop-item{display:flex;justify-content:space-between;padding:8px;border-radius:8px;margin-bottom:8px;background:var(--muted);cursor:pointer}
+.shop-item:hover{transform:translateY(-2px)}
+.shop-item .meta{font-size:13px;color:#264}
+.selected-badge{background:#e6fffa;padding:6px 8px;border-radius:8px}
+.footer{text-align:center;padding:12px;color:#666}
+
+
+/* small responsive */
+@media(max-width:980px){.layout{grid-template-columns:1fr;}.sidebar{order:2}.rightpanel{order:3}.map-area{order:1}}
